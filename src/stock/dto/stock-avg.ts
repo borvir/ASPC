@@ -1,13 +1,12 @@
-import { IsString } from "class-validator";
+import { IsNumber, IsString } from 'class-validator';
 
 export class StockAvgDto {
+  @IsString()
+  symbol: string;
 
-    @IsString()
-    symbol: string;
+  @IsString()
+  lastUpdated: string;
 
-    @IsString()
-    lastUpdated: string;
-
-    @IsString()
-    movingAverage: number;
+  @IsNumber()
+  movingAverage: number;
 }

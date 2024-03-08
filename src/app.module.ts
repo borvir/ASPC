@@ -4,8 +4,7 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TypeOrmOptionsFactory } from './config/typeorm-options.factory';
 import { StockModule } from './stock/stock.module';
-import { HttpModule } from "@nestjs/axios";
-import { FinnhubModule } from './finnhub/finnhub.module';
+import { HttpModule } from '@nestjs/axios';
 
 @Module({
   imports: [
@@ -14,7 +13,6 @@ import { FinnhubModule } from './finnhub/finnhub.module';
     TypeOrmModule.forRoot(TypeOrmOptionsFactory.createTypeOrmOptions()),
     StockModule,
     HttpModule,
-    // FinnhubModule,
   ],
 })
 export class AppModule {}

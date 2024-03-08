@@ -7,10 +7,7 @@ import { HttpModule } from '@nestjs/axios';
 import { FinnhubService } from 'src/finnhub/finnhub.service';
 
 @Module({
-  imports: [
-    TypeOrmModule.forFeature([Stock]),
-    HttpModule,
-  ],
+  imports: [TypeOrmModule.forFeature([Stock]), HttpModule],
   controllers: [StockController],
   providers: [StockService, FinnhubService],
 })

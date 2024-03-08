@@ -1,30 +1,29 @@
-import { CoreEntity } from "src/core/enitity/core.entity";
-import { Column, Entity } from "typeorm";
+import { CoreEntity } from 'src/core/enitity/core.entity';
+import { Column, Entity } from 'typeorm';
 
 @Entity()
 export class Stock extends CoreEntity {
+  @Column({ nullable: false })
+  symbol: string;
 
-    @Column()
-    symbol: string;
+  @Column({ nullable: false })
+  c: string;
 
-    @Column()
-    c: string;
+  @Column({ nullable: true })
+  d: string;
 
-    @Column()
-    d: string;
+  @Column({ nullable: true })
+  dp: string;
 
-    @Column()
-    dp: string;
+  @Column({ nullable: true })
+  h: string;
 
-    @Column()
-    h: string;
+  @Column({ nullable: true })
+  l: string;
 
-    @Column()
-    l: string;
+  @Column({ nullable: true })
+  o: string;
 
-    @Column()
-    o: string;
-
-    @Column()
-    pc: string;
+  @Column({ nullable: true })
+  pc: string;
 }

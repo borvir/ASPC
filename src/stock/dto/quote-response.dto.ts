@@ -1,24 +1,24 @@
-import { IsNumber } from "class-validator";
+import { IsNumber } from 'class-validator';
 
 export class QuoteResponseDto {
-    @IsNumber()
-    c: number;
+  @IsNumber()
+  c: number;
 
-    @IsNumber()
-    d: number;
+  @IsNumber()
+  d: number;
 
-    @IsNumber()
-    dp: number;
-    
-    @IsNumber()
-    h: number;
+  @IsNumber()
+  dp: number;
 
-    @IsNumber()
-    l: number;
+  @IsNumber()
+  h: number;
 
-    @IsNumber()
-    o: number;
+  @IsNumber()
+  l: number;
 
-    @IsNumber()
-    pc: number;
+  @IsNumber()
+  o: number;
+
+  @IsNumber()
+  pc: number;
 }

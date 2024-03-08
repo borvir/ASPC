@@ -1,12 +1,18 @@
 import { HttpService } from '@nestjs/axios';
-import { Inject, Injectable, NotFoundException, forwardRef } from '@nestjs/common';
+import {
+  Inject,
+  Injectable,
+  NotFoundException,
+  forwardRef,
+} from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { Cron, CronExpression, SchedulerRegistry } from '@nestjs/schedule';
 import { firstValueFrom } from 'rxjs';
 import { CronJob } from 'cron';
 import { StockService } from 'src/stock/stock.service';
-import { DefaultApi } from 'node_modules/finnhub/dist/api/DefaultApi.js'
+import { DefaultApi } from 'node_modules/finnhub/dist/api/DefaultApi.js';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const finnhub = require('finnhub');
 
 @Injectable()

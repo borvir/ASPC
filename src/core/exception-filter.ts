@@ -7,7 +7,10 @@ export class AllExceptionsFilter implements ExceptionFilter {
     const ctx = host.switchToHttp();
     const response = ctx.getResponse<Response>();
     const status = 'error';
-    const message = (exception instanceof Error) ? exception.message : 'Unexpected error occurred';
+    const message =
+      exception instanceof Error
+        ? exception.message
+        : 'Unexpected error occurred';
 
     response.status(500).json({ status, message });
   }

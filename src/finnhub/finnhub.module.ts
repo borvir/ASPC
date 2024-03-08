@@ -5,8 +5,7 @@ import { HttpModule } from '@nestjs/axios';
 import { StockService } from 'src/stock/stock.service';
 
 @Module({
-  imports: [
-    HttpModule],
+  imports: [HttpModule],
   controllers: [FinnhubController],
   providers: [FinnhubService, StockService],
 })

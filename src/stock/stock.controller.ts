@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, Put } from '@nestjs/common';
+import { Controller, Get, Param, Put } from '@nestjs/common';
 import { StockService } from './stock.service';
 import { ApiOkResponse, ApiTags } from '@nestjs/swagger';
 import { StockAvgDto } from './dto/stock-avg';
@@ -23,5 +23,4 @@ export class StockController {
   update(@Param('symbol') symbol: string) {
     return this.stockService.addNew(symbol);
   }
-
 }
